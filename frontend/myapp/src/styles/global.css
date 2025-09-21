@@ -1,0 +1,86 @@
+
+:root {
+  --primary: #2563eb;   /* blue */
+  --primary-dark: #1e40af;
+  --danger: #dc2626;    /* red */
+  --gray-light: #f3f4f6;
+  --gray: #6b7280;
+  --card-bg: #ffffff;
+  --border-radius: 12px;
+  --shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  background: #f9fafb;
+  color: #111827;
+}
+
+h2, h3, h4 {
+  margin: 0 0 8px;
+}
+
+.small {
+  font-size: 0.875rem;
+  color: var(--gray);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+
+.input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input:focus, select:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.button {
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: var(--primary-dark);
+}
+
+.button.danger {
+  background: var(--danger);
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

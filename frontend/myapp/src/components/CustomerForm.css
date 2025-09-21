@@ -1,0 +1,41 @@
+.form-card {
+  max-width: 500px;
+  margin: 1rem auto;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.customer-form label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.input {
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.message {
+  margin-top: 1rem;
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
