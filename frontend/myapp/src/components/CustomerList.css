@@ -77,3 +77,59 @@
 @media (min-width: 1024px) {
   .grid { grid-template-columns: repeat(3, 1fr); }
 }
+.customer-list .toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.customer-list .toolbar .input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.customer-list .toolbar .button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.customer-list .toolbar .button.primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.customer-list .toolbar .button.secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.customer-list .list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.customer-list .list-header select {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 5px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.customer-list .list-header select:hover {
+  border-color: #007bff;
+}
+
+.customer-list .list-header label {
+  font-weight: 500;
+  margin-right: 5px;
+}

@@ -1,17 +1,23 @@
-const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:4000/api';
+const API_BASE = 'https://qwipo-assignment1-hq3x.onrender.com/api';
 
 export async function api(path, opts = {}) {
   const res = await fetch(`${API_BASE}${path}`, {
     headers: { 'Content-Type': 'application/json' },
     ...opts
   });
+
   const contentType = res.headers.get('content-type');
+  let json = null;
   if (contentType && contentType.includes('application/json')) {
-    const json = await res.json();
-    if (!res.ok) throw { status: res.status, body: json };
-    return json;
-  } else {
-    if (!res.ok) throw { status: res.status, body: null };
-    return null;
+    json = await res.json();
   }
+
+  if (!res.ok) {
+    const error = new Error('API request failed');
+    error.status = res.status;
+    error.body = json;
+    throw error;
+  }
+
+  return json;
 }
